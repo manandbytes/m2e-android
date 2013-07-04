@@ -3,6 +3,7 @@ package me.gladwell.eclipse.m2e.android.test;
 import java.io.File;
 
 import org.eclipse.core.resources.IProject;
+import org.eclipse.core.resources.IWorkspaceDescription;
 
 import com.android.ide.eclipse.adt.AdtConstants;
 
@@ -27,7 +28,11 @@ public class MultiModulePluginTest extends AndroidMavenPluginTestCase {
     }
 
     public void testConfigure() throws Exception {
-    	assertNoErrors(parentProject);
+        IWorkspaceDescription description = workspace.getDescription();
+        description.setAutoBuilding(true);
+        workspace.setDescription(description);
+
+        assertNoErrors(parentProject);
     	assertNoErrors(childLibraryProject);
     	assertNoErrors(childProject);
     }
