@@ -18,26 +18,26 @@ public class MultiModulePluginTest extends AndroidMavenPluginTestCase {
     private IProject childProject;
     private IProject childLibraryProject;
 
-    @Override
-    protected void setUp() throws Exception {
-        super.setUp();
+	@Override
+	protected void setUp() throws Exception {
+		super.setUp();
 
-        parentProject = importAndroidProject(PARENT_PROJECT_NAME);
-        parentProject.build(IncrementalProjectBuilder.FULL_BUILD, monitor);
+		parentProject = importAndroidProject(PARENT_PROJECT_NAME);
 
-        childLibraryProject = importAndroidProject(PARENT_PROJECT_NAME + File.separator + CHILD_LIBRARY_PROJECT_NAME);
-        childLibraryProject.build(IncrementalProjectBuilder.FULL_BUILD, monitor);
+		childLibraryProject = importAndroidProject(PARENT_PROJECT_NAME + File.separator + CHILD_LIBRARY_PROJECT_NAME);
 
-        childProject = importAndroidProject(PARENT_PROJECT_NAME + File.separator + CHILD_PROJECT_NAME);
-        childProject.build(IncrementalProjectBuilder.FULL_BUILD, monitor);
-    }
+		childProject = importAndroidProject(PARENT_PROJECT_NAME + File.separator + CHILD_PROJECT_NAME);
+	}
 
-    public void testConfigure() throws Exception {
+	public void testConfigure() throws Exception {
+		parentProject.build(IncrementalProjectBuilder.FULL_BUILD, monitor);
+		childLibraryProject.build(IncrementalProjectBuilder.FULL_BUILD, monitor);
+		childProject.build(IncrementalProjectBuilder.FULL_BUILD, monitor);
 
-        assertNoErrors(parentProject);
-    	assertNoErrors(childLibraryProject);
-    	assertNoErrors(childProject);
-    }
+		assertNoErrors(parentProject);
+		assertNoErrors(childLibraryProject);
+		assertNoErrors(childProject);
+	}
 
     public void testConfigureAddsAndroidNature() throws Exception {
         assertTrue("failed to add android nature to child module", childProject.hasNature(AdtConstants.NATURE_DEFAULT));
