@@ -28,9 +28,9 @@ public class MultiModulePluginTest extends AndroidMavenPluginTestCase {
 	}
 
 	public void testConfigure() throws Exception {
-		parentProject.build(IncrementalProjectBuilder.FULL_BUILD, monitor);
-		childLibraryProject.build(IncrementalProjectBuilder.FULL_BUILD, monitor);
-		childProject.build(IncrementalProjectBuilder.FULL_BUILD, monitor);
+		buildAndroidProject(parentProject, IncrementalProjectBuilder.FULL_BUILD);
+		buildAndroidProject(childLibraryProject, IncrementalProjectBuilder.FULL_BUILD);
+		buildAndroidProject(childProject, IncrementalProjectBuilder.FULL_BUILD);
 
 		assertNoErrors(parentProject);
 		assertNoErrors(childLibraryProject);
