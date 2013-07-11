@@ -23,9 +23,7 @@ public class MultiModulePluginTest extends AndroidMavenPluginTestCase {
 		super.setUp();
 
 		parentProject = importAndroidProject(PARENT_PROJECT_NAME);
-
 		childLibraryProject = importAndroidProject(PARENT_PROJECT_NAME + File.separator + CHILD_LIBRARY_PROJECT_NAME);
-
 		childProject = importAndroidProject(PARENT_PROJECT_NAME + File.separator + CHILD_PROJECT_NAME);
 	}
 
