@@ -29,13 +29,7 @@ public class LibraryAndroidMavenPluginTest extends AndroidMavenPluginTestCase {
     private static final String ANDROID_LIB_PROJECT_NAME = "android-library";
     private static final String TEST_PROJECT_WITH_APKLIB_DEPS = "test-project-apklib-deps";
 
-	@Override
-	protected void setUp() throws Exception {
-		super.setUp();
-
-	}
-
-    public void testConfigure() throws Exception {
+	public void testConfigure() throws Exception {
 		IProject libraryProject = importAndroidProject(ANDROID_LIB_PROJECT_NAME);
 		assertNoErrors(libraryProject);
 	}
