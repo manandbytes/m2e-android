@@ -30,7 +30,7 @@ public class MultiModulePluginTest extends AndroidMavenPluginTestCase {
 	public void testConfigure() throws Exception {
 		projectRefreshJob.wakeUp();
 		buildAndroidProject(childLibraryProject, IncrementalProjectBuilder.FULL_BUILD);
-		buildAndroidProject(childProject, IncrementalProjectBuilder.FULL_BUILD);
+		buildAndroidProject(childProject, IncrementalProjectBuilder.INCREMENTAL_BUILD);
 
 		assertNoErrors(parentProject);
 		assertNoErrors(childLibraryProject);
