@@ -8,6 +8,9 @@ env:
     - TARGET_PLATFORM=kepler
     - TARGET_PLATFORM=indigo
     - TARGET_PLATFORM=juno
+matrix:
+  allow_failures:
+    - openjdk6
 before_install:
   - wget http://dl.google.com/android/android-sdk_r22.0.1-linux.tgz
   - tar -zxf android-sdk_r22.0.1-linux.tgz
