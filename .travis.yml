@@ -15,5 +15,5 @@ before_install:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
 script: mvn --file me.gladwell.eclipse.m2e.android.test/pom.xml -Dtycho.showEclipseLog=true -Dtarget.platform=$TARGET_PLATFORM verify
-after_failure:
+after_script:
   - cat me.gladwell.eclipse.m2e.android.test/target/work/data/.metadata/.log
