@@ -61,16 +61,11 @@ public abstract class AndroidMavenPluginTestCase extends AbstractMavenProjectTes
     }
 
 	protected void waitForAdtToLoad() throws InterruptedException, Exception {
-        try {
-    		JobHelpers.waitForJobs(new IJobMatcher() {
-    			public boolean matches(Job job) {
-    				return job.getClass().getName().contains(Sdk.class.getName());
-    			}
-
-    		}, MAXIMUM_SECONDS_TO_LOAD_ADT * 1000);
-        } catch(Throwable t) {
-            t.printStackTrace();
-        }
+		JobHelpers.waitForJobs(new IJobMatcher() {
+			public boolean matches(Job job) {
+				return job.getClass().getName().contains(Sdk.class.getName());
+			}
+		}, MAXIMUM_SECONDS_TO_LOAD_ADT * 1000);
 	}
 
 	protected IProject importAndroidProject(String name) throws Exception {
