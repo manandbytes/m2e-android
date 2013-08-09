@@ -63,7 +63,7 @@ public abstract class AndroidMavenPluginTestCase extends AbstractMavenProjectTes
 	protected void waitForAdtToLoad() throws InterruptedException, Exception {
 		JobHelpers.waitForJobs(new IJobMatcher() {
 			public boolean matches(Job job) {
-				return job.getClass().getName().contains(Sdk.class.getName());
+				return job.getClass().getName().startsWith("com.android.ide.eclipse.adt");
 			}
 		}, MAXIMUM_SECONDS_TO_LOAD_ADT * 1000);
 	}
