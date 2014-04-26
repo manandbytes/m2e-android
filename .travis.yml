@@ -21,4 +21,5 @@ before_install:
   - sh -e /etc/init.d/xvfb start
   - echo 'adtUsed=true' > ~/.android/ddms.cfg
   - echo "lastSdkPath=$ANDROID_HOME" >> ~/.android/ddms.cfg
+  - echo "pingOptIn=false" >> ~/.android/ddms.cfg
 script: mvn --file me.gladwell.eclipse.m2e.android.test/pom.xml -Dtycho.showEclipseLog=true -Dtarget.platform=$TARGET_PLATFORM verify
