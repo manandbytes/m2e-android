@@ -23,5 +23,5 @@ before_install:
   - echo "lastSdkPath=$ANDROID_HOME" >> ~/.android/ddms.cfg
   - echo "pingId=-1" >> ~/.android/ddms.cfg
 script: mvn --file me.gladwell.eclipse.m2e.android.test/pom.xml -Dtycho.showEclipseLog=true -Dtarget.platform=$TARGET_PLATFORM verify
-after_failure:
+after_script:
   - cat ~/.android/ddms.cfg
