@@ -33,6 +33,8 @@ interraction from dialogs. To avoid this execute the following command:
 
 ```
 $ echo 'adtUsed=true' > ~/.android/ddms.cfg
+$ echo "lastSdkPath=$ANDROID_HOME" >> ~/.android/ddms.cfg
+
 ```
 
 ###...have a clear intention

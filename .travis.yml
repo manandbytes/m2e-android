@@ -19,4 +19,5 @@ before_install:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
   - echo 'adtUsed=true' > ~/.android/ddms.cfg
+  - echo "lastSdkPath=$ANDROID_HOME" >> ~/.android/ddms.cfg
 script: mvn --file me.gladwell.eclipse.m2e.android.test/pom.xml -Dtycho.showEclipseLog=true -Dtarget.platform=$TARGET_PLATFORM verify
