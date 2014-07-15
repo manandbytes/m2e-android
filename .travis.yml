@@ -6,6 +6,8 @@ env:
   matrix:
     - TARGET_PLATFORM=luna
     - TARGET_PLATFORM=kepler
+    - TARGET_PLATFORM=indigo
+    - TARGET_PLATFORM=juno
     allow_failures:
       - TARGET_PLATFORM=indigo
       - TARGET_PLATFORM=juno
