@@ -24,9 +24,6 @@
       </location>
       <location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
          <unit id="org.eclipse.sdk.ide" version="0.0.0"/>
-         <repository location="http://download.eclipse.org/releases/indigo/"/>
-      </location>
-      <location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
          <unit id="org.slf4j.api" version="1.6.4.v20120130-2120"/>
          <repository location="http://download.eclipse.org/releases/indigo/"/>
       </location>
