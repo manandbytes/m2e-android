@@ -76,28 +76,28 @@
 	  <dependency-resolution>
 	    <extraRequirements>
               <requirement>
-                <type>eclipse-feature</type>
+                <type>eclipse-plugin</type>
                 <id>com.android.ide.eclipse.adt</id>
                 <versionRange>0.0.0</versionRange>
               </requirement>
               <requirement>
-                <type>eclipse-feature</type>
+                <type>eclipse-plugin</type>
                 <id>com.android.ide.eclipse.ddms</id>
                 <versionRange>0.0.0</versionRange>
               </requirement>
               <requirement>
-                <type>eclipse-feature</type>
+                <type>eclipse-plugin</type>
                 <id>com.android.ide.eclipse.hierarchyviewer</id>
                 <versionRange>0.0.0</versionRange>
               </requirement>
               <requirement>
-                <type>eclipse-feature</type>
+                <type>eclipse-plugin</type>
                 <id>com.android.ide.eclipse.traceview</id>
                 <versionRange>0.0.0</versionRange>
               </requirement>
               <requirement>
                 <type>eclipse-feature</type>
-                <id>org.eclipse.sdk.ide</id>
+                <id>org.eclipse.sdk</id>
                 <versionRange>0.0.0</versionRange>
               </requirement>
             </extraRequirements>
