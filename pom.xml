@@ -121,6 +121,20 @@
         </configuration>
       </plugin>
       <plugin>
+        <groupId>org.eclipse.tycho.extras</groupId>
+        <artifactId>target-platform-validation-plugin</artifactId>
+        <version>${tycho-version}</version>
+        <configuration>
+          <targetFiles>
+            <param>indigo/indigo.target</param>
+            <param>juno/juno.target</param>
+            <param>kepler/kepler.target</param>
+            <param>luna/luna.target</param>
+          </targetFiles>
+          <checkDependencies>true</checkDependencies>
+        </configuration>
+      </plugin>
+      <plugin>
         <groupId>org.eclipse.tycho</groupId>
         <artifactId>tycho-source-plugin</artifactId>
         <version>${tycho-version}</version>
