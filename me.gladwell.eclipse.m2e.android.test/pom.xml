@@ -66,29 +66,42 @@
           <argLine>${vmargs}
             -Declipse.pluginCustomization=${project.build.directory}/plugin_customisation.ini</argLine>
           <useUIHarness>true</useUIHarness>
-          <dependencies>
-            <dependency>
-              <type>p2-installable-unit</type>
-              <artifactId>com.android.ide.eclipse.adt</artifactId>
-            </dependency>
-            <dependency>
-              <type>p2-installable-unit</type>
-              <artifactId>com.android.ide.eclipse.ddms</artifactId>
-            </dependency>
-            <dependency>
-              <type>p2-installable-unit</type>
-              <artifactId>com.android.ide.eclipse.hierarchyviewer</artifactId>
-            </dependency>
-            <dependency>
-              <type>p2-installable-unit</type>
-              <artifactId>com.android.ide.eclipse.traceview</artifactId>
-            </dependency>
-            <dependency>
-              <type>p2-installable-unit</type>
-              <artifactId>org.eclipse.sdk.ide</artifactId>
-              <version>0.0.0</version>
-            </dependency>
-          </dependencies>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>target-platform-configuration</artifactId>
+        <configuration>
+	  <dependency-resolution>
+	    <extraRequirements>
+              <requirement>
+                <type>eclipse-feature</type>
+                <artifactId>com.android.ide.eclipse.adt</artifactId>
+                <versionRange>0.0.0</versionRange>
+              </requirement>
+              <requirement>
+                <type>eclipse-feature</type>
+                <artifactId>com.android.ide.eclipse.ddms</artifactId>
+                <versionRange>0.0.0</versionRange>
+              </requirement>
+              <requirement>
+                <type>eclipse-feature</type>
+                <artifactId>com.android.ide.eclipse.hierarchyviewer</artifactId>
+                <versionRange>0.0.0</versionRange>
+              </requirement>
+              <requirement>
+                <type>eclipse-feature</type>
+                <artifactId>com.android.ide.eclipse.traceview</artifactId>
+                <versionRange>0.0.0</versionRange>
+              </requirement>
+              <requirement>
+                <type>eclipse-feature</type>
+                <artifactId>org.eclipse.sdk.ide</artifactId>
+                <versionRange>0.0.0</versionRange>
+              </requirement>
+            </extraRequirements>
+          </dependency-resolution>
         </configuration>
       </plugin>
 
