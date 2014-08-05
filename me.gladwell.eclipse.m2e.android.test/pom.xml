@@ -77,27 +77,27 @@
 	    <extraRequirements>
               <requirement>
                 <type>eclipse-feature</type>
-                <artifactId>com.android.ide.eclipse.adt</artifactId>
+                <id>com.android.ide.eclipse.adt</id>
                 <versionRange>0.0.0</versionRange>
               </requirement>
               <requirement>
                 <type>eclipse-feature</type>
-                <artifactId>com.android.ide.eclipse.ddms</artifactId>
+                <id>com.android.ide.eclipse.ddms</id>
                 <versionRange>0.0.0</versionRange>
               </requirement>
               <requirement>
                 <type>eclipse-feature</type>
-                <artifactId>com.android.ide.eclipse.hierarchyviewer</artifactId>
+                <id>com.android.ide.eclipse.hierarchyviewer</id>
                 <versionRange>0.0.0</versionRange>
               </requirement>
               <requirement>
                 <type>eclipse-feature</type>
-                <artifactId>com.android.ide.eclipse.traceview</artifactId>
+                <id>com.android.ide.eclipse.traceview</id>
                 <versionRange>0.0.0</versionRange>
               </requirement>
               <requirement>
                 <type>eclipse-feature</type>
-                <artifactId>org.eclipse.sdk.ide</artifactId>
+                <id>org.eclipse.sdk.ide</id>
                 <versionRange>0.0.0</versionRange>
               </requirement>
             </extraRequirements>
