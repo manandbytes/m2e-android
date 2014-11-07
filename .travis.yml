@@ -36,6 +36,7 @@ before_install:
 
 before_script:
   - export DISPLAY=:99.0
+  - export ADT_TEST_SDK_PATH=$ANDROID_HOME
   - echo adtUsed=true$'\n'lastSdkPath=$ANDROID_HOME > ~/.android/ddms.cfg
 
 after_script:
