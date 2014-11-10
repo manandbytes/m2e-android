@@ -40,6 +40,7 @@ before_script:
   - echo adtUsed=true > ~/.android/ddms.cfg
   - echo lastSdkPath=$ANDROID_HOME >> ~/.android/ddms.cfg
   - echo pingId=-1 >> ~/.android/ddms.cfg
+  - echo pingOptIn=false >> ~/.android/ddms.cfg
 
 after_script:
   - cat ~/.android/ddms.cfg
